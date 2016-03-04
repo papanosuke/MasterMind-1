@@ -33,14 +33,14 @@ def getNumber():
             flag = 1
 
         # 各文字が数字かチェック
-        for i in range(3):
+        for i in range(len(number)):
             if (number[i]<'0' or '9'<number[i]):
                 flag = 1
                 break
 
         # 3つの数字に重複がないかチェック
-        for i in range(3):
-            for j in range(i+1,3):
+        for i in range(len(number)):
+            for j in range(i+1,len(number)):
                 if(number[i]==number[j]):
                     flag = 1
                     break
@@ -82,5 +82,3 @@ if __name__ == '__main__':
 
     print("Game Clear!")
     print("Challenge Count=%d" % (ct))
-#
-# test comment
