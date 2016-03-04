@@ -70,13 +70,15 @@ if __name__ == '__main__':
     hit = 0
     while(hit!=3):
         print("Challenge Count: %d" % (ct))
-        ct += 1
 
         number = getNumber()
         hit = check_hit(number, answer)
         blow = check_blow(number, answer)
         print("Hit=%d, Blow=%d" % (hit, blow))
         print('')
+
+        if (hit!=3):
+            ct += 1
 
     print("Game Clear!")
     print("Challenge Count=%d" % (ct))
